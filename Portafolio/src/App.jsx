@@ -44,11 +44,11 @@ function App() {
         }
       } else {
         // Mueve los botones de vuelta a su lugar original si están visibles
-        const content = document.querySelector('.content');
-        if (!content.contains(subtitles)) {
-          content.insertBefore(subtitles, content.children[2]);
-          subtitles.classList.remove('sticky');
-        }
+        // const content = document.querySelector('.content');
+        // if (!content.contains(subtitles)) {
+        //   content.insertBefore(subtitles, content.children[2]);
+        //   subtitles.classList.remove('sticky');
+        // }
       }
     };
 
@@ -82,8 +82,8 @@ function App() {
             <div className="PP"></div>
             <div className="ResumenDesc"> <br/> Pablo Cesar Lopez Medina <br/> Estudiante en Licenciatura en Ingienieria en Ciencias de la Computacion y Tecnologias de la Informacion</div>
           </div>
-          <div className="Studies"> Studies:
-            <div className="StudyInfo">
+          <div className="Categoria"> Studies:
+            <div className="CategoriaInfo">
               <div className="StudyD">
                 <div className="PicnName">
                   <div className="pic1"></div>
@@ -101,7 +101,42 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="Projects"></div>
+          <div className="CategoriaP"> Projects: 
+            <div className="CardsB">
+              <div className="card">
+                <div className="imgCard"></div>
+                <div className="TitleCard"> Blog</div>
+                <div className="descCard"></div>
+              </div>
+              <div className="card">
+                <div className="imgCard"></div>
+                <div className="TitleCard"> Chat</div>
+                <div className="descCard"> <br/> Chat grupal que se conecta a una API, todo desarrollado con JavaScript vanilla y es interactivo con todas las personas que se logren conectar a la API.</div>
+              </div>              
+              <div className="card">
+                <div className="imgCard" style={{backgroundImage: 'url(../src/assets/imagenes/calculadora-Chrome.jpg)'}}></div>
+                <div className="TitleCard"> Calculadora</div>
+                <div className="descCard"> <br /> Calculadora funcional con teclado y mouse que integra tests par poder aprender la importancia de testings.</div>
+              </div>
+            </div>
+            <div className="CardsB">
+              <div className="card">
+                <div className="imgCard"></div>
+                <div className="TitleCard"> Blog</div>
+                <div className="descCard"></div>
+              </div>
+              <div className="card">
+                <div className="imgCard"></div>
+                <div className="TitleCard"> Chat</div>
+                <div className="descCard"></div>
+              </div>              
+              <div className="card">
+                <div className="imgCard" style={{backgroundImage: 'url(../src/assets/imagenes/calculadora-Chrome.jpg)'}}></div>
+                <div className="TitleCard"> Calculadora</div>
+                <div className="descCard"> <br /> Calculadora funcional con teclado y mouse que integra tests par poder aprender la importancia de testings.</div>
+              </div>
+            </div>
+          </div>
           <div className="Experience"></div>
           <div className="Contact"></div>
         </div>

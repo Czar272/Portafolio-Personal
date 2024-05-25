@@ -227,7 +227,7 @@
   font-weight: bold;
 }
 
-.Studies {
+.Categoria {
   display: flex;
   flex-direction: column;
   justify-content: left;
@@ -240,17 +240,35 @@
   min-height: 80%;
   width: 90%;
   margin-top: 5%;
+  border: 1px solid black;
 }
 
-.StudyInfo {
+.CategoriaP {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  color: black;
+  font-family: "Yasashii W01 Bold";
+  font-size: 400%;
+  padding-left: 3%;
+  padding-top: 2%;
+  border-radius: 20px;
+  min-height: 160%;
+  width: 90%;
+  margin-top: 5%;
+  border: 1px solid black;
+}
+
+.CategoriaInfo {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   height: 70%;
   width: 80%;
+  border: 1px solid black;
   margin-left: 10%;
-  
+
 }
 
 .StudyD {
@@ -324,5 +342,65 @@
   border-radius: 20px;
   font-size: medium;
   font-family:  Arial, sans-serif;
+}
 
+.CardsB {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 90%;
+  height: 80%;
+  margin-left: 8%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 30%;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin: 2%;
+}
+
+.imgCard {
+  display: flex;
+  height: 70%;
+  width: 100%;
+  /* border: 1px solid black; */
+  /* background-image: url(../src/assets/imagenes/calculadora-Chrome.jpg); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  margin: 1%;
+  margin-top: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.TitleCard {
+  display: flex;
+  height: 10%;
+  width: 95%;
+  /* border: 1px solid black; */
+  font-size: x-large;
+  align-items: center;
+  margin: 1%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.descCard {
+  display: flex;
+  height: 20%;
+  width: 95%;
+  margin: 1%;
+  /* border: 1px solid black; */
+  font-size: small;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
