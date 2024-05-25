@@ -34,14 +34,14 @@ function App() {
             <div className="profilePic"> César López </div>
           </div>
           <div id = "midHeader" className="midHeader">
-            {showSustBtn && (
-                <>
+            
+                
                   <div className="sustBtn">Studies</div>
                   <div className="sustBtn">Projects</div>
                   <div className="sustBtn">Experience</div>
                   <div className="sustBtn">Contact Me</div>
-                </>
-              )}
+                
+              
           </div>
           <div className="rightHeader">
             <div className="imgMenu"></div>
@@ -58,6 +58,11 @@ function App() {
           <div className="resumen">
             <div className="PP"></div>
             <div className="ResumenDesc"> <br/> Pablo Cesar Lopez Medina <br/> Estudiante en Licenciatura en Ingienieria en Ciencias de la Computacion y Tecnologias de la Informacion</div>
+            <div className="socials">
+              <div className="imgSocial"></div>
+              <div className="imgSocial"></div>
+              <div className="imgSocial"></div>
+            </div>
           </div>
           <div className="Categoria"> Studies:
             <div className="CategoriaInfo">
@@ -93,17 +98,17 @@ function App() {
               <div className="card">
                 <div className="imgCard" style={{backgroundImage: 'url(../src/assets/imagenes/CalculadoraPic1.png)'}}></div>
                 <div className="TitleCard"> Calculadora</div>
-                <div className="descCard"> <br /> Calculadora funcional con teclado y mouse que integra tests par poder aprender la importancia de testings.</div>
+                <div className="descCard">  Calculadora funcional con teclado y mouse que integra tests par poder aprender la importancia de testings.</div>
               </div>
             </div>
             <div className="CardsB">
               <div className="card">
                 <div className="imgCard"></div>
                 <div className="TitleCard"> Blog</div>
-                <div className="descCard"></div>
+                <div className="descCard">  Blog de la historia de un video juego, todo su contenido es extraído de una base de datos realizada en MySQL workbench.</div>
               </div>
               <div className="card">
-                <div className="imgCard"></div>
+                <div className="imgCard" style={{backgroundImage: 'url(../src/assets/imagenes/CSSOnlyP1.png)'}}></div>
                 <div className="TitleCard"> Proyecto CSS Only</div>
                 <div className="descCard"> <br/>Una pagina web que despliega un dibujo solamente hecho con CSS, siendo interactivo y con animaciones</div>
               </div>              
