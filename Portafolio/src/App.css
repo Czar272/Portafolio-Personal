@@ -47,6 +47,7 @@
 }
 
 .header {
+  background-color: transparent;
   display: flex;
   width: 100%;
   height: 20%;
@@ -54,6 +55,7 @@
 
 .leftHeader {
   display: flex;
+  background-color: transparent;
   align-self: center;
   justify-content: left;
   height: 100%;
@@ -78,12 +80,35 @@
 }
 
 .midHeader {
+  background-color: transparent;
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 50%;
 }
 
+.sustBtn {
+  display: flex;
+  align-items: end;
+  background-color: transparent;
+  justify-content: center;
+  height: 50%;
+  margin-top: -15%;
+  margin-right: 5%;
+  margin-left: 5%;
+  width: 13%;
+  color:#348888;
+  font-weight: bolder;
+  transition: 2s;
+}
+
+.sustBtn:hover {
+  background: linear-gradient(white, #3488887e);
+}
+
 .rightHeader {
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: right;
@@ -185,7 +210,7 @@
   color: #348888;
   width: 20%;
   height: 40%;
-  margin-top: 10%;
+  margin-top: 8%;
   transition: 1s;
 }
 
@@ -233,14 +258,14 @@
   justify-content: left;
   color: black;
   font-family: "Yasashii W01 Bold";
-  font-size: 400%;
+  font-size: 300%;
   padding-left: 3%;
   padding-top: 2%;
   border-radius: 20px;
-  min-height: 80%;
-  width: 90%;
+  min-height: 70%;
+  width: 80%;
   margin-top: 5%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .CategoriaP {
@@ -249,14 +274,14 @@
   justify-content: left;
   color: black;
   font-family: "Yasashii W01 Bold";
-  font-size: 400%;
+  font-size: 300%;
   padding-left: 3%;
   padding-top: 2%;
   border-radius: 20px;
-  min-height: 160%;
-  width: 90%;
-  margin-top: 5%;
-  border: 1px solid black;
+  min-height: 140%;
+  width: 80%;
+  margin-top: 2%;
+  /* border: 1px solid black; */
 }
 
 .CategoriaInfo {
@@ -266,7 +291,7 @@
   flex-direction: column;
   height: 70%;
   width: 80%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin-left: 10%;
 
 }
@@ -336,6 +361,7 @@
 
 .StudyDesc {
   display: flex;
+  flex-direction: column;
   height: 100%;
   width: 75%;
   /* border: 1px solid black; */
@@ -348,7 +374,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 90%;
   height: 80%;
   margin-left: 8%;
@@ -359,11 +385,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #34888862;
   height: 90%;
   width: 30%;
   border: 1px solid black;
   border-radius: 20px;
   margin: 2%;
+  transition: 1s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 1px 10px black;
+
 }
 
 .imgCard {
@@ -401,6 +435,6 @@
   width: 95%;
   margin: 1%;
   /* border: 1px solid black; */
-  font-size: small;
+  font-size: 23%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
