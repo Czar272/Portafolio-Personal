@@ -14,14 +14,32 @@ function App() {
           </div>
         </div>
         <div className="content">
-          <div className="Title">Designer Y Frontend Developer</div>
+          <div className="Title">Designer and Frontend Developer</div>
           <div className="subtitles">
             <div className="btn">Studies</div>
             <div className="btn">Projects</div>
             <div className="btn">Experience</div>
             <div className="btn">Contact Me</div>
           </div>
-          <div className="Studies"> Studies</div>
+          <div className="Studies"> Studies:
+            <div className="StudyInfo">
+              <div className="StudyD">
+                <div className="PicnName">
+                  <div className="pic1"></div>
+                  <div className="name">Bilingue el Prado</div>
+                </div>
+                <div className="StudyDesc"><br/> Bilingue el Prado <br /> <br />  Estudie en este colegio desde el 7mo grado hasta el 12vo, habiéndome graduado de ahi sali con un bachiller en ciencias y letras con orientación en computación.  </div>
+              </div>
+              <div className="StudyD">
+                <div className="PicnName">
+                    <div className="pic2"></div>
+                    <div className="name">UVG</div>
+                  </div>
+                <div className="StudyDesc"><br/> Universidad del Valle de Guatemala <br /> <br />  Actualmente cursando el 6to semestre o 3er año, todos los cursos aprobados y con promedio anual de 80 en adelante. </div>
+
+              </div>
+            </div>
+          </div>
           <div className="Projects"></div>
           <div className="Experience"></div>
           <div className="Contact"></div>

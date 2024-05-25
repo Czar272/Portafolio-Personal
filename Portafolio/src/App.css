@@ -176,7 +176,7 @@
 
 .Studies {
   display: flex;
-  /* border: 2px solid #348888; */
+  flex-direction: column;
   justify-content: left;
   color: black;
   font-family: "Yasashii W01 Bold";
@@ -187,4 +187,89 @@
   min-height: 80%;
   width: 90%;
   margin-top: 5%;
+}
+
+.StudyInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 70%;
+  width: 80%;
+  margin-left: 10%;
+  
+}
+
+.StudyD {
+  display: flex;
+  background-color: #34888863;
+  height: 40%;
+  width: 90%;
+  /* border: 1px solid black; */
+  margin: 1%;
+  border-radius: 20px;
+  transition: 1s;
+}
+
+.StudyD:hover {
+  transform: scale(1.03);
+  box-shadow: 1px 1px 10px black;
+
+}
+
+.PicnName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 20%;
+}
+
+.pic1 {
+  display: flex;
+  height: 75%;
+  width: 60%;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8NYNy7-fR7STPJDc4GlaSdVufd0S7S1C_cG3pch7O-A&s);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 1px black;
+}
+
+.pic2 {
+  display: flex;
+  height: 75%;
+  width: 60%;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+  background-image: url(https://www.eduopinions.com/wp-content/uploads/2017/08/Universidad-del-Valle-de-Guatemala-UVG-logo-350x250.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 1px black;
+
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 15%;
+  width: 90%;
+  font-size: medium;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.StudyDesc {
+  display: flex;
+  height: 100%;
+  width: 75%;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  font-size: medium;
+  font-family:  Arial, sans-serif;
+
 }
