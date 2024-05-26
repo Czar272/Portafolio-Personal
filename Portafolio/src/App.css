@@ -104,7 +104,8 @@
 }
 
 .sustBtn:hover {
-  background: linear-gradient(white, #3488887e);
+  background: linear-gradient(white, #34888843);
+  transition: 2s;
 }
 
 .rightHeader {
@@ -262,17 +263,42 @@
   /* border: 1px solid black; */
 }
 
+
+
 .imgSocial {
   display: flex;
-  height: 50%;
-  width: 5%;
-  margin: 10%;
-  border-radius: 50%;
+  justify-content: left;
+  align-items: center;
+  height: 40%;
+  width: 15%;
+  margin: 5%;
+  border-radius: 50px;
+  border: 1px solid #348888;
+  color: black;
+  text-align: center;
+  /* background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png); */
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: 1s;
+}
+
+.icon {
+  display: flex;
+  margin-left: 0%;
+  /* margin-right: 20%; */
+  height: 80%;
+  width: 23%;
   /* border: 1px solid black; */
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.imgSocial:hover {
+  transform: scale(1.03);
+  box-shadow: 1px 1px 10px black;
 }
 
 .Categoria {
@@ -322,17 +348,21 @@
 .StudyD {
   display: flex;
   background-color: #34888863;
+  color: black;
   height: 40%;
   width: 90%;
   /* border: 1px solid black; */
   margin: 1%;
   border-radius: 20px;
+  cursor: pointer;
   transition: 1s;
+  
 }
 
 .StudyD:hover {
   transform: scale(1.03);
   box-shadow: 1px 1px 10px black;
+  color: black;
 
 }
 
@@ -407,6 +437,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: black;
   align-items: center;
   background-color: #34888833;
   height: 90%;
@@ -420,6 +451,7 @@
 .card:hover {
   transform: scale(1.05);
   box-shadow: 1px 1px 10px black;
+  color: black;
 
 }
 

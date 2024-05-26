@@ -34,14 +34,10 @@ function App() {
             <div className="profilePic"> César López </div>
           </div>
           <div id = "midHeader" className="midHeader">
-            
-                
-                  <div className="sustBtn">Studies</div>
-                  <div className="sustBtn">Projects</div>
-                  <div className="sustBtn">Experience</div>
-                  <div className="sustBtn">Contact Me</div>
-                
-              
+              <div className="sustBtn">Studies</div>
+              <div className="sustBtn">Projects</div>
+              <div className="sustBtn">Experience</div>
+              <div className="sustBtn">Contact Me</div>
           </div>
           <div className="rightHeader">
             <div className="imgMenu"></div>
@@ -57,11 +53,20 @@ function App() {
             </div>
           <div className="resumen">
             <div className="PP"></div>
-            <div className="ResumenDesc"> <br/> Pablo Cesar Lopez Medina <br/> Estudiante en Licenciatura en Ingienieria en Ciencias de la Computacion y Tecnologias de la Informacion</div>
+            <div className="ResumenDesc"> <br/> Pablo Cesar Lopez Medina <br/> Estudiante en Ingienieria en Ciencias de la Computacion y Tecnologias de la Informacion</div>
             <div className="socials">
-              <div className="imgSocial"></div>
-              <div className="imgSocial"></div>
-              <div className="imgSocial"></div>
+              <a className="imgSocial" style = {{ width: "10%" }}href = 'https://www.linkedin.com/in/pablo-c%C3%A9sar-l%C3%B3pez-medina-8055b6241'>
+                <div className="icon" style={{ marginLeft: '5%', marginRight: '5%', backgroundImage: 'url(https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9f/ae/bf/9faebf2f-19aa-d6f7-88f8-5c5913724c9f/AppIcon-0-1x_U007emarketing-0-7-0-85-220-0.png/1200x600wa.png)'}}></div>
+                Linkedin
+              </a>
+              <a className="imgSocial" style={{width: '10%'}} href='https://github.com/Czar272'>
+                <div className="icon" style={{ marginLeft: '5%', marginRight: '10%', backgroundImage: 'url(https://banner2.cleanpng.com/20180711/iqy/kisspng-github-computer-icons-github-logo-5b459a3d238b60.4061479515312881251456.jpg)'}}></div>
+                Github
+              </a>
+              <a className="imgSocial" style = {{width: '10%'}}href="mailto:pablo2003cesar@gmail.com">
+                <div className="icon" style={{ marginLeft: '5%',marginRight: '10%' ,backgroundImage: 'url(https://freelogopng.com/images/all_img/1657906383gmail-icon-png.png)'}}></div>
+                Gmail
+              </a>
             </div>
           </div>
           <div className="Categoria"> Studies:
@@ -73,14 +78,14 @@ function App() {
                 </div>
                 <div className="StudyDesc"><br/> <b>Bilingue el Prado</b>   Estudie en este colegio desde el 7mo grado hasta el 12vo, habiéndome graduado de ahi sali con un bachiller en ciencias y letras con orientación en computación.  </div>
               </div>
-              <div className="StudyD">
+              <a className="StudyD" href='https://www.uvg.edu.gt'>
                 <div className="PicnName">
                     <div className="pic2"></div>
                     <div className="name">UVG</div>
                   </div>
                 <div className="StudyDesc"><br/> <b>Universidad del Valle de Guatemala</b> Actualmente cursando el 6to semestre o 3er año, todos los cursos aprobados y con promedio anual de 80 en adelante. </div>
  
-              </div>
+              </a>
             </div>
           </div>
           <div className="CategoriaP"> Projects: 
@@ -107,15 +112,15 @@ function App() {
                 <div className="TitleCard"> Blog</div>
                 <div className="descCard">  Blog de la historia de un video juego, todo su contenido es extraído de una base de datos realizada en MySQL workbench.</div>
               </div>
-              <div className="card">
+              <a className="card" href = 'http://uwu-guate.site:3414'>
                 <div className="imgCard" style={{backgroundImage: 'url(../src/assets/imagenes/CSSOnlyP1.png)'}}></div>
                 <div className="TitleCard"> Proyecto CSS Only</div>
                 <div className="descCard"> <br/>Una pagina web que despliega un dibujo solamente hecho con CSS, siendo interactivo y con animaciones</div>
-              </div>              
+              </a>              
               <div className="card">
                 <div className="imgCard"></div>
-                <div className="TitleCard"> Calculadora</div>
-                <div className="descCard"></div>
+                <div className="TitleCard"> Editar Post</div>
+                <div className="descCard">  Una funcionalidad para el blog, donde modifica una base de datos por medio de querys desde la misma pagina web. </div>
               </div>
             </div>
           </div>
