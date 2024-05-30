@@ -195,7 +195,40 @@
   /* font-family: "Yasashii W01 Bold"; */
   /* box-shadow: 1px 1px 100px #89B3D9; */
   /* -webkit-text-stroke-width: 0.3px; */
+  animation-duration: 1s;
+  animation-name: slidein;
   /* -webkit-text-stroke-color: #FA7F08; */
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+
+  }
+
+  to {
+    margin-left: 0;
+  }
+  
+}
+
+p {
+  animation-duration: 7s;
+  animation-name: slideindown;
+}
+
+@keyframes slideindown {
+  from {
+    margin-top: 20%;
+    color: transparent;
+    /* width: 300; */
+  }
+
+  to {
+    color: black;
+    margin-top: 6%;
+    /* width: 100%; */
+  }
 }
 
 .subtitles {
@@ -204,7 +237,23 @@
   width: 50%;
   justify-content: center;
   align-items: center;
+  animation-duration: 1s;
+  animation-name: slidein;
 }
+
+@keyframes slideinup {
+  from {
+    color: none;
+    background-color: none;
+    border: none;
+    margin-top: 20%;
+  }
+
+  to {
+    margin-top: 0;
+  }
+}
+
 
 .sticky {
   position: fixed;
@@ -272,17 +321,48 @@
 
 .ResumenDesc {
   display: flex;
+  flex-direction: column;
   height: 20%;
   width: 90%;
   /* border: 1px solid black; */
   margin: 2%;
   justify-content: center;
+  white-space: nowrap;
+  /* border-right: 1px solid black; */
   text-align: center;
   color:#348888;
   font-size: large;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: bold;
+  /* font-family: 'Courier New', Courier, monospace; */
+  /* font-weight: bold; */
+  /* animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite; */
 }
+
+.PdescR {
+  font-size: large;
+  font-family:'Courier New', Courier, monospace;
+  border-right: 0.15em solid #348888;
+  animation: blinkk 1s steps(1) infinite;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+  
+}
+
+@keyframes blinkk {
+  50% {
+    border-color: transparent;
+  }
+}
+
 
 .socials {
   display: flex;
@@ -337,7 +417,8 @@
   flex-direction: column;
   justify-content: left;
   color: black;
-  font-family: "Yasashii W01 Bold";
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* font-family: "Yasashii W01 Bold"; */
   font-size: 300%;
   padding-left: 3%;
   padding-top: 2%;
@@ -353,7 +434,8 @@
   flex-direction: column;
   justify-content: left;
   color: black;
-  font-family: "Yasashii W01 Bold";
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* font-family: "Yasashii W01 Bold"; */
   font-size: 300%;
   padding-left: 3%;
   padding-top: 2%;
@@ -549,10 +631,11 @@
   display: flex;
   height: 30%;
   width: 5%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: white;
   /* border: 1px solid black; */
-  margin-right: 2.5%;
-  margin-left: 2.5%;
+  margin-right: 4%;
+  margin-left: 4%;
   border-radius: 50%;
   background-position: center;
   background-size: contain;

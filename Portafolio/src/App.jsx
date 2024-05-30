@@ -50,7 +50,7 @@ function App() {
           </div>
         </div>
         <div className="content">
-          <div className="Title">Designer and Frontend Developer</div>
+          <div className="Title">  <p>Designer and Frontend Developer </p></div>
           <div id = "subtitles" className ="subtitles">
               <div className="btn">Studies</div>
               <div className="btn">Projects</div>
@@ -59,7 +59,7 @@ function App() {
             </div>
           <div className="resumen">
             <div className="PP"></div>
-            <div className="ResumenDesc"> <br/> Pablo Cesar Lopez Medina <br/> Estudiante en Ingienieria en Ciencias de la Computacion y Tecnologias de la Informacion</div>
+            <div className="ResumenDesc"> <p className='PdescR'>Pablo Cesar Lopez Medina</p> <p className='PdescR'>Estudiante en Ingienieria en Ciencias de la Computacion y Tecnologias de la Informacion</p> </div>
             <div className="socials">
               <a className="imgSocial" style = {{ width: "10%" }}href = 'https://www.linkedin.com/in/pablo-c%C3%A9sar-l%C3%B3pez-medina-8055b6241'>
                 <div className="icon" style={{ marginLeft: '5%', marginRight: '5%', backgroundImage: 'url(https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9f/ae/bf/9faebf2f-19aa-d6f7-88f8-5c5913724c9f/AppIcon-0-1x_U007emarketing-0-7-0-85-220-0.png/1200x600wa.png)'}}></div>
