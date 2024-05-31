@@ -117,34 +117,34 @@ function App() {
           Projects: 
             <div className="CardsB" style={{fontSize: '70%', textAlign: 'left'}}>
               <div className="card">
-                <div className="imgCard" style={{backgroundImage: 'url(../src/assets/imagenes/BlogPic1.png)'}}></div>
+                <div className="imgCard" style={{backgroundImage: 'url(./imagenes/BlogPic1.png)'}}></div>
                 <div className="TitleCard"> Log In</div>
                 <div className="descCard">Inicio de sesion a un sitio web con la implementacion de una ruta privada /admin, que provee acciones y acceso a rutas unicas para el, diferenciandolo a otros usuarios. </div>
               </div>
               <div className="card">
-                <div className="imgCard" style={{backgroundImage: 'url(../src/assets/imagenes/ChatPic1.png)'}}></div>
+                <div className="imgCard" style={{backgroundImage: 'url(./imagenes/ChatPic1.png)'}}></div>
                 <div className="TitleCard"> Chat</div>
                 <div className="descCard"> Chat grupal que se conecta a una API, todo desarrollado con JavaScript vanilla y es interactivo con todas las personas que se logren conectar a la API.</div>
               </div>              
               <div className="card">
-                <div className="imgCard" style={{backgroundImage: 'url(../src/assets/imagenes/CalculadoraPic1.png)'}}></div>
+                <div className="imgCard" style={{backgroundImage: 'url(./imagenes/CalculadoraPic1.png)'}}></div>
                 <div className="TitleCard"> Calculadora</div>
                 <div className="descCard">  Calculadora funcional con teclado y mouse que integra tests par poder aprender la importancia de testings.</div>
               </div>
             </div>
             <div className="CardsB" style={{fontSize: '70%', textAlign: 'left'}}>
               <div className="card">
-                <div className="imgCard" style={{backgroundImage: 'url(../src/assets/imagenes/BlogPic2.jpg)'}}></div>
+                <div className="imgCard" style={{backgroundImage: 'url(./imagenes/BlogPic2.jpg)'}}></div>
                 <div className="TitleCard"> Blog</div>
                 <div className="descCard">  Blog de la historia de un video juego, todo su contenido es extraído de una base de datos realizada en MySQL workbench.</div>
               </div>
               <a className="card" href = 'http://uwu-guate.site:3414'>
-                <div className="imgCard" style={{backgroundImage: 'url(../src/assets/imagenes/CSSOnlyP1.png)'}}></div>
+                <div className="imgCard" style={{backgroundImage: 'url(./imagenes/CSSOnlyP1.png)'}}></div>
                 <div className="TitleCard"> Proyecto CSS Only</div>
                 <div className="descCard"> <br/>Una pagina web que despliega un dibujo solamente hecho con CSS, siendo interactivo y con animaciones</div>
               </a>              
               <div className="card">
-                <div className="imgCard" style={{backgroundImage: 'url(../src/assets/imagenes/editimg1.jpg)'}}></div>
+                <div className="imgCard" style={{backgroundImage: 'url(./imagenes/editimg1.jpg)'}}></div>
                 <div className="TitleCard"> Editar Post</div>
                 <div className="descCard">  Una funcionalidad para el blog, donde modifica una base de datos por medio de querys desde la misma pagina web. </div>
               </div>

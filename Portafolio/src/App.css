@@ -174,7 +174,7 @@
   align-items: center;
   height: 50%;
   width: 50%;
-  background-image: url(../src/assets/imagenes/cursor-dedo.png);
+  background-image: url(./imagenes/cursor-dedo.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -546,7 +546,7 @@ justify-content: center;
   /* margin-top: 25%; */
   border: 1px solid black;
   border-radius: 50%;
-  background-image: url(../src/assets/imagenes/PP2.jpg);
+  background-image: url(./imagenes/PP2.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
