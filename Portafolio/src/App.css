@@ -174,7 +174,7 @@
   align-items: center;
   height: 50%;
   width: 50%;
-  background-image: url(./imagenes/cursor-dedo.png);
+  /* background-image: url('./imagenes/cursor-dedo.png'); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

@@ -48,7 +48,7 @@ function App() {
             <div className={`sustBtn ${!subtitlesVisible ? 'visible' : ''}`} onClick={() => scrollToSection('Contact')}>About Me</div>
           </div>
           <div className="rightHeader">
-            <div className="imgMenu" onClick={() => scrollToSection('top')}></div>
+            <div className="imgMenu" onClick={() => scrollToSection('top')} style={{backgroundImage: 'url(./imagenes/cursor-dedo.png)'}}></div>
           </div>
         </div>
         <div className="content">
