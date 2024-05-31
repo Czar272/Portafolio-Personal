@@ -935,8 +935,8 @@ justify-content: center;
 
 .tecImgs {
   display: flex;
-  height: 23%;
-  width: 5%;
+  height: 30%;
+  width: 4%;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: white;
   /* border: 1px solid black; */

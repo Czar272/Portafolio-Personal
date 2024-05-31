@@ -150,7 +150,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div id='Experience' className="Categoria" style={{backgroundColor: '#348888', color: 'white', width: '100%', fontFamily: 'Gambetta, serif',marginBottom: '0' }}>
+          <div id='Experience' className="Categoria" style={{backgroundColor: '#348888', color: 'white', width: '100%', fontFamily: 'Gambetta, serif',marginBottom: '0', minHeight: '60%'}}>
             Tecnologies:
             <div className="tecnologias" >
               <div className="rowTec">
