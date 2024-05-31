@@ -25,6 +25,8 @@
   url("https://db.onlinewebfonts.com/t/5a9cfd32800f79b8e29c3bd25042d5a8.svg#F36 days ago Thick BRK V1")format("svg");
 }
 
+
+
 .contenedor {
   display: flex;
   flex-direction: column;
@@ -35,9 +37,9 @@
   left: 0;
   background-color: #F2F2F2;
   /* background-image: url(https://images.unsplash.com/photo-1487088678257-3a541e6e3922?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
-  /* background-position: center;
+  background-position: center;
   background-repeat: repeat;
-  background-size: cover; */
+  background-size: cover;
   align-items: center;
   overflow-y: auto;
   -ms-overflow-style: none;
@@ -52,7 +54,7 @@
   background-color: transparent;
   display: flex;
   width: 100%;
-  height: 20%;
+  height: 10%;
 }
 
 .leftHeader {
@@ -61,7 +63,7 @@
   align-self: center;
   justify-content: left;
   height: 100%;
-  width: 25%;
+  width: 20%;
 }
 
 .profilePic {
@@ -69,6 +71,8 @@
   border-bottom-right-radius: 100%;  
   height: 100%;
   width:  50%;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
   /* justify-content: center;
   align-items: center; */
   background-color: #348888;
@@ -79,7 +83,7 @@
   font-size: xx-large;
   /* padding-right: 10%; */
   /* padding-top: 5%; */
-  padding-bottom: 13%;
+  padding-bottom: 20%;
   
 }
 
@@ -92,6 +96,7 @@
   background-color: white;
   border-bottom-right-radius: 100%;  
   margin-bottom: 5%;
+  padding-bottom: 15%;
 }
 
 .lunaimg {
@@ -102,6 +107,7 @@
   background-image: url(https://cdn-icons-png.freepik.com/512/6714/6714978.png);
   background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
@@ -118,23 +124,37 @@
 }
 
 .sustBtn {
+  opacity: 0;
   display: flex;
-  align-items: end;
+  align-items: center;
+  text-align: center;
+  color: black;
   background-color: transparent;
   justify-content: center;
   height: 50%;
-  margin-top: -15%;
-  margin-right: 5%;
-  margin-left: 5%;
-  width: 13%;
+  /* margin-top: -15%; */
+  /* margin-right: 2%; */
+  margin-left: 15%;
+  width: 15%;
   color:#348888;
   font-weight: bolder;
   transition: 2s;
+  transition: opacity 1s ease-in-out;
+  cursor: pointer;
 }
 
+.sustBtn.visible {
+  opacity: 1;
+}
+
+
+
 .sustBtn:hover {
-  background: linear-gradient(white, #34888843);
-  transition: 2s;
+  /* box-shadow: 0px 1px 3px #348888; */
+  /* background-color: #34888848; */
+  /* transition: 2s; */
+  color: black;
+  transform: scale(1.2);
 }
 
 .rightHeader {
@@ -184,6 +204,7 @@
   width: 55%;
   /* background-color: #035AA6; */
   font-size: 300%;
+  margin-left: 3%;
   justify-content: center;
   align-items: center;
   color: black;
@@ -212,9 +233,22 @@
   
 }
 
-p {
-  animation-duration: 7s;
+.titles {
+  font-size: 100%;
+  text-transform: uppercase;
+  font-family: 'Gambetta', serif;
+  transition: 700ms ease;
+  font-variation-settings: "wght" 311;
+  margin-bottom: 5%;
+  /* outline: none; */
+  /* text-align: center; */
+  animation-duration: 3s;
   animation-name: slideindown;
+}
+
+.titles:hover {
+  font-variation-settings: "wght" 582;
+  letter-spacing: 10px;
 }
 
 @keyframes slideindown {
@@ -226,7 +260,7 @@ p {
 
   to {
     color: black;
-    margin-top: 6%;
+    margin-top: 4%;
     /* width: 100%; */
   }
 }
@@ -283,7 +317,153 @@ p {
   cursor: pointer;
 }
 
-.btn:hover {
+@property --shimmer {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 33deg;
+}
+
+@keyframes shimmer {
+  0% {
+      --shimmer: 0deg;
+  }
+  100% {
+      --shimmer: 360deg;
+  }
+}
+
+@keyframes shine {
+  0% {
+      opacity: 0;
+  }
+  15% {
+      opacity: 1;
+  }
+  55% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+@keyframes text {
+  0% {
+      background-position: 100% center;
+  }    
+  100% {
+      background-position: -100% center;
+  }    
+}
+
+button {
+  display: flex;
+  height: 70%;
+  min-width: 15%;
+  color: var(--bg); 
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  /*     background-image: linear-gradient(90deg, #fcecfe, #fbf6e7, #e6fcf5); */
+  background-color: black;
+  /* background-image: linear-gradient(
+      315deg,
+      #348888 -10%,
+      white 50%,
+      #348888 110%
+  ); */
+  padding: .8em 1.4em;
+  position: relative;
+  isolation: isolate;
+  /* box-shadow: 0 2px 3px 1px hsl(var(--glow-hue) 50% 20% / 50%), inset 0 -10px 20px -10px hsla(var(--shadow-hue),10%,90%,95%); */
+  border-radius: 0.66em;
+  /* border: 10px solid black; */
+  scale: 1;
+  margin-top: 2%;
+  margin-left: 3%;
+  margin-right: 3%;
+  transition: all var(--spring-duration) var(--spring-easing);
+
+}
+
+button:hover:not(:active),
+button.active {
+  transition-duration: calc(var(--spring-duration)*0.5);
+  scale: 1.2;
+  box-shadow: 0 4px 8px -2px hsl(var(--glow-hue) 50% 20% / 50%), inset 0 0 0 transparent;
+}
+button:active {
+  scale: 1.1;
+  transition-duration: calc(var(--spring-duration)*0.5);
+}
+
+.shimmer {
+  position: absolute;
+  inset: -40px;
+  border-radius: inherit;
+  mask-image: conic-gradient(
+      from var(--shimmer, 0deg),
+      transparent 0%,
+      transparent 10%,
+      black 36%,
+      black 45%,
+      transparent 50%,
+      transparent 60%,
+      black 85%,
+      black 95%,
+      transparent 100%
+  );
+  mask-size: cover;
+  mix-blend-mode: plus-lighter;
+  animation: shimmer 1s linear infinite both;
+}
+button:hover .shimmer::before,
+button:hover .shimmer::after,
+button.active .shimmer::before,
+button.active .shimmer::after {
+  opacity: 1;
+  animation: shine 1.2s ease-in 1 forwards;
+}
+.shimmer::before,
+.shimmer::after {
+  transition: all 2s ease;
+  opacity: 0;
+  content: "";
+  border-radius: inherit;
+  position: absolute;
+  mix-blend-mode: color;
+  inset: 40px;
+  pointer-events: none;
+}
+.shimmer::before {
+  box-shadow: 0 0 3px 2px hsl(var(--glow-hue) 20% 95%),
+      0 0 7px 4px hsl(var(--glow-hue) 20% 80%),
+      0 0 13px 4px hsl(var(--glow-hue) 50% 70%),
+      0 0 25px 5px hsl(var(--glow-hue) 100% 70%);
+  z-index: -1;
+}
+
+.shimmer::after {
+  box-shadow: inset 0 0 0 1px hsl(var(--glow-hue) 70% 95%),
+      inset 0 0 2px 1px hsl(var(--glow-hue) 100% 80%),
+      inset 0 0 5px 2px hsl(var(--glow-hue) 100% 70%);
+  z-index: 2;
+}
+
+button .text {
+  color: transparent;
+  background-clip: text;
+  background-color: white;
+  background-image: linear-gradient(120deg, transparent, hsla(var(--glow-hue),100%,80%,0.66) 40%, hsla(var(--glow-hue),100%,90%,.9) 50%, transparent 52%);
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  background-position: center 200%;
+}
+
+button:hover .text,
+button.active .text {
+  animation: text 1s ease-in 1 both;
+}
+/* .btn:hover {
   background-color: white;
   border: 2px solid #348888;
   color: #348888;
@@ -291,7 +471,7 @@ p {
   height: 40%;
   margin-top: 8%;
   transition: 1s;
-}
+} */
 
 .resumen {
   display: flex;
@@ -306,17 +486,74 @@ p {
 
 .PP {
   display: flex;
-  height: 40%;
-  width: 15%;
-  /* border: 1px solid black; */
+  min-height: 45%;
+  justify-content: center;
+  color: transparent;
+  align-items: center;
+  width: 22%;
+  margin-top: 10%;
+  margin-bottom: -20%;
+  /* margin-top: 25%; */
+  border: 1px solid black;
   border-radius: 50%;
   background-image: url(../src/assets/imagenes/PP2.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 1px 1px 10px black;
+  cursor: pointer;
+  animation-duration: 1s;
+  animation-name: slidein;
+  /* -webkit-animation: breathing 4s ease-out infinite normal; */
+  /* animation: breathing 5s ease-out infinite normal; */
+  /* -webkit-font-smoothing: antialiased; */
+  transition: 2s;
 
+}
 
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  50% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  75% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+.PP:hover {
+  transform: scale(1.1);
+  border-radius: 20px;
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-weight: bold; */
+  /* transform: scaleY(-1); */
+  width: 38%;
+  background-position: left;
+  background-size: contain;
+  background-color: #459999b7;
 }
 
 .ResumenDesc {
@@ -339,45 +576,32 @@ p {
 
 .PdescR {
   font-size: large;
-  font-family:'Courier New', Courier, monospace;
-  border-right: 0.15em solid #348888;
-  animation: blinkk 1s steps(1) infinite;
+  /* font-family:'Courier New', Courier, monospace; */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* border-right: 0.15em solid #348888; */
+  /* animation: typing blinkk 1s steps(1) infinite; */
   font-weight: bold;
   margin-bottom: 0;
+  margin-top: 0;
 }
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-  
-}
-
-@keyframes blinkk {
-  50% {
-    border-color: transparent;
-  }
-}
-
 
 .socials {
   display: flex;
-  height: 20%;
-  width: 90%;
-  margin: 2%;
+  /* background-color: #348888; */
+  height: 15%;
+  width: 100%;
+  margin: 0%;
+  margin-bottom: 15%;
   justify-content: center;
   align-items: center;
+  margin-top: 25%;
+  /* border-top: 1px solid black; */
   /* border: 1px solid black; */
 }
 
-
-
 .imgSocial {
   display: flex;
+  background-color: white;
   justify-content: left;
   align-items: center;
   height: 40%;
@@ -417,15 +641,18 @@ p {
   flex-direction: column;
   justify-content: left;
   color: black;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Gambetta', serif;
+
+  /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
   /* font-family: "Yasashii W01 Bold"; */
   font-size: 300%;
   padding-left: 3%;
   padding-top: 2%;
   border-radius: 20px;
-  min-height: 70%;
+  min-height: 100%;
   width: 80%;
   margin-top: 5%;
+  margin-bottom: 5%;
   /* border: 1px solid black; */
 }
 
@@ -460,16 +687,40 @@ p {
 
 .StudyD {
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #34888863;
   color: black;
   height: 40%;
   width: 90%;
-  /* border: 1px solid black; */
+  border: 1px solid black;
   margin: 1%;
   border-radius: 20px;
   cursor: pointer;
   transition: 1s;
-  
+  /* animation-duration: 1s;
+  animation-name: slidein; */
+  view-timeline-name: --studies;
+  view-timeline-axis: block;
+
+  animation-timeline: --studies;
+  animation-name: show;
+
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
+  animation-duration: 2s;  
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 35%;
+  }
+
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
 }
 
 .StudyD:hover {
@@ -492,26 +743,26 @@ p {
   display: flex;
   height: 75%;
   width: 60%;
-  /* border: 1px solid black; */
-  border-radius: 50%;
+  /* border: 2px solid #348888; */
+  /* border-radius: 50%; */
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8NYNy7-fR7STPJDc4GlaSdVufd0S7S1C_cG3pch7O-A&s);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: 1px 1px 1px black;
+  /* box-shadow: 1px 1px 1px black; */
 }
 
 .pic2 {
   display: flex;
   height: 75%;
   width: 60%;
-  /* border: 1px solid black; */
-  border-radius: 50%;
+  /* border: 2px solid #348888; */
+  /* border-radius: 50%; */
   background-image: url(https://www.eduopinions.com/wp-content/uploads/2017/08/Universidad-del-Valle-de-Guatemala-UVG-logo-350x250.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: 1px 1px 1px black;
+  /* box-shadow: 1px 1px 1px black; */
 
 }
 
@@ -528,12 +779,14 @@ p {
 .StudyDesc {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  /* background-color: #34888867; */
+  height: 80%;
   width: 75%;
   /* border: 1px solid black; */
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: medium;
   font-family:  Arial, sans-serif;
+  
 }
 
 .CardsB {
@@ -584,6 +837,9 @@ p {
   border-top-right-radius: 20px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  /* animation-name: slidein; */
+
+  
 }
 
 .TitleCard {
@@ -629,7 +885,7 @@ p {
 
 .tecImgs {
   display: flex;
-  height: 30%;
+  height: 23%;
   width: 5%;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: white;

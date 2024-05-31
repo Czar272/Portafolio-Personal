@@ -3,30 +3,32 @@ import './App.css'
 
 function App() {
 
-  // external js: flickity.pkgd.js
-
-  const [showSustBtn, setShowSustBtn] = useState(false)
+  const [subtitlesVisible, setSubtitlesVisible] = useState(true);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const subtitles = document.getElementById('subtitles');
-      const rect = subtitles.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setSubtitlesVisible(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
 
-      // Verifica si el elemento subtitles está completamente fuera del viewport
-      if (rect.bottom < 0 || rect.top > windowHeight) {
-        setShowSustBtn(true);
-      } else {
-        setShowSustBtn(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
+    const subtitlesElement = document.getElementById('subtitles');
+    if (subtitlesElement) {
+      observer.observe(subtitlesElement);
+    }
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      if (subtitlesElement) {
+        observer.unobserve(subtitlesElement);
+      }
     };
   }, []);
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    section.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <>
@@ -39,28 +41,42 @@ function App() {
               </div>
             </div>
           </div>
-          <div id = "midHeader" className="midHeader">
-              {/* <div className="sustBtn">Studies</div>
-              <div className="sustBtn">Projects</div>
-              <div className="sustBtn">Experience</div>
-              <div className="sustBtn">Contact Me</div> */}
+          <div id="midHeader" className="midHeader">
+            <div className={`sustBtn ${!subtitlesVisible ? 'visible' : ''}`} onClick={() => scrollToSection('Studies')}>Studies</div>
+            <div className={`sustBtn ${!subtitlesVisible ? 'visible' : ''}`} onClick={() => scrollToSection('Projects')}>Projects</div>
+            <div className={`sustBtn ${!subtitlesVisible ? 'visible' : ''}`} onClick={() => scrollToSection('Experience')}>Experience</div>
+            <div className={`sustBtn ${!subtitlesVisible ? 'visible' : ''}`} onClick={() => scrollToSection('Contact')}>About Me</div>
           </div>
           <div className="rightHeader">
-            <div className="imgMenu"></div>
+            {/* <div className="imgMenu"></div> */}
           </div>
         </div>
         <div className="content">
-          <div className="Title">  <p>Designer and Frontend Developer </p></div>
+          <div className="Title">  <h1  className='titles'>Designer & Forntend Developer</h1></div>
           <div id = "subtitles" className ="subtitles">
-              <div className="btn">Studies</div>
+              <button onClick={() => scrollToSection('Studies')}>
+                  <span class="text">Studies</span>
+                  <span class="shimmer"></span>
+              </button>
+              <button onClick={() => scrollToSection('Projects')}>
+                  <span class="text">Projects</span>
+                  <span class="shimmer"></span>
+              </button>
+              <button onClick={() => scrollToSection('Experience')}>
+                  <span class="text">Experience</span>
+                  <span class="shimmer"></span>
+              </button>
+              <button onClick={() => scrollToSection('Contact')}>
+                  <span class="text">About Me</span>
+                  <span class="shimmer"></span>
+              </button>
+              {/* <div className="btn">Studies</div>
               <div className="btn">Projects</div>
               <div className="btn">Experience</div>
-              <div className="btn">Contact Me</div>
+              <div className="btn">Contact Me</div> */}
             </div>
-          <div className="resumen">
-            <div className="PP"></div>
-            <div className="ResumenDesc"> <p className='PdescR'>Pablo Cesar Lopez Medina</p> <p className='PdescR'>Estudiante en Ingienieria en Ciencias de la Computacion y Tecnologias de la Informacion</p> </div>
-            <div className="socials">
+            <div id='Contact' className="PP"> <p style={{marginLeft: '45%'}}>Pablo Cesar Lopez Medina Estudiante en Ingienieria en Ciencias de la Computacion y Tecnologias de la Informacion </p></div>
+            <div  className="socials">
               <a className="imgSocial" style = {{ width: "10%" }}href = 'https://www.linkedin.com/in/pablo-c%C3%A9sar-l%C3%B3pez-medina-8055b6241'>
                 <div className="icon" style={{ marginLeft: '5%', marginRight: '5%', backgroundImage: 'url(https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9f/ae/bf/9faebf2f-19aa-d6f7-88f8-5c5913724c9f/AppIcon-0-1x_U007emarketing-0-7-0-85-220-0.png/1200x600wa.png)'}}></div>
                 Linkedin
@@ -74,27 +90,32 @@ function App() {
                 Gmail
               </a>
             </div>
-          </div>
-          <div className="Categoria" style={{backgroundColor: '#348888', color: 'white', border: '3px solid black'}}> Studies:
+            {/* <div className="resumen"> */}
+            {/* <div className="ResumenDesc"> <p className='PdescR'>Pablo Cesar Lopez Medina</p> <p className='PdescR'>Estudiante en Ingienieria en Ciencias de la Computacion y Tecnologias de la Informacion</p> </div> */}
+          {/* </div> */}
+          <div id='Studies' className="Categoria" style={{marginTop: '-10%' ,backgroundColor: '#348888', color: 'white', width: '100%', fontSize: '500%'}}> 
+          Studies:
             <div className="CategoriaInfo">
               <div className="StudyD" style={{backgroundColor: 'white', border: '3px solid black'}}>
                 <div className="PicnName" >
                   <div className="pic1"></div>
                   <div className="name">Bilingue el Prado</div>
                 </div>
-                <div className="StudyDesc"><br/> <b>Bilingue el Prado</b>   Estudie en este colegio desde el 7mo grado hasta el 12vo, habiéndome graduado de ahi sali con un bachiller en ciencias y letras con orientación en computación.  </div>
+                <div className="StudyDesc"><br/> <b>Bilingue el Prado</b>  <br/> Estudie en este colegio desde el 7mo grado hasta el 12vo, habiéndome graduado de ahi sali con un bachiller en ciencias y letras con orientación en computación.  </div>
               </div>
               <a className="StudyD " style={{backgroundColor: 'white', border: '3px solid black'}} href='https://www.uvg.edu.gt'>
                 <div className="PicnName">
                     <div className="pic2"></div>
                     <div className="name">UVG</div>
                   </div>
-                <div className="StudyDesc"><br/> <b>Universidad del Valle de Guatemala</b> Actualmente cursando el 6to semestre o 3er año, todos los cursos aprobados y con promedio anual de 80 en adelante. </div>
+                <div className="StudyDesc"><br/> <b>Universidad del Valle de Guatemala</b>  <br/> Actualmente cursando el 6to semestre o 3er año, todos los cursos aprobados y con promedio anual de 80 en adelante. </div>
               </a>
             </div>
           </div>
-          <div className="CategoriaP"> Projects: 
-            <div className="CardsB">
+  
+          <div id='Projects' className="CategoriaP" style={{width: '90%', fontFamily: 'Gambetta, serif', textAlign: 'right', fontSize: '400%'}}> 
+          Projects: 
+            <div className="CardsB" style={{fontSize: '70%', textAlign: 'left'}}>
               <div className="card">
                 <div className="imgCard" style={{backgroundImage: 'url(../src/assets/imagenes/BlogPic1.png)'}}></div>
                 <div className="TitleCard"> Log In</div>
@@ -111,7 +132,7 @@ function App() {
                 <div className="descCard">  Calculadora funcional con teclado y mouse que integra tests par poder aprender la importancia de testings.</div>
               </div>
             </div>
-            <div className="CardsB">
+            <div className="CardsB" style={{fontSize: '70%', textAlign: 'left'}}>
               <div className="card">
                 <div className="imgCard" style={{backgroundImage: 'url(../src/assets/imagenes/BlogPic2.jpg)'}}></div>
                 <div className="TitleCard"> Blog</div>
@@ -129,9 +150,9 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="Categoria" style={{backgroundColor: '#348888', color: 'white', border: '3px solid black'}}>
-            Tecnlogies:
-            <div className="tecnologias">
+          <div id='Experience' className="Categoria" style={{backgroundColor: '#348888', color: 'white', width: '100%', fontFamily: 'Gambetta, serif',marginBottom: '0' }}>
+            Tecnologies:
+            <div className="tecnologias" >
               <div className="rowTec">
                 <div className="tecImgs" style={{backgroundImage: 'url(https://w1.pngwing.com/pngs/835/530/png-transparent-python-logo-programming-language-computer-programming-python-programming-basics-for-absolute-beginners-scripting-language-source-code-php-code-climate-inc-thumbnail.png)'}}></div>
                 <div className="tecImgs" style={{backgroundImage: 'url(https://cdn-icons-png.flaticon.com/512/226/226777.png)'}}></div>
@@ -152,7 +173,6 @@ function App() {
               </div>              
             </div>
           </div>
-          <div className="Contact"></div>
         </div>
       </div>
     </>
