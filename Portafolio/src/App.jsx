@@ -48,11 +48,11 @@ function App() {
             <div className={`sustBtn ${!subtitlesVisible ? 'visible' : ''}`} onClick={() => scrollToSection('Contact')}>About Me</div>
           </div>
           <div className="rightHeader">
-            {/* <div className="imgMenu"></div> */}
+            <div className="imgMenu" onClick={() => scrollToSection('top')}></div>
           </div>
         </div>
         <div className="content">
-          <div className="Title">  <h1  className='titles'>Designer & Forntend Developer</h1></div>
+          <div id = 'top'className="Title">  <h1  className='titles'>Designer & Forntend Developer</h1></div>
           <div id = "subtitles" className ="subtitles">
               <button onClick={() => scrollToSection('Studies')}>
                   <span class="text">Studies</span>
